@@ -1,9 +1,11 @@
 const wetherBlock = document.querySelector('#weather');
 
+import myImage from '/src/images/loading.gif';
+
 async function loadWeather() {
   wetherBlock.innerHTML = `
   <div class="weather__loading">
-    <img src="/src/images/load.gif" alt="Loading..." />
+    <img src="${myImage}" alt="Loading..." />
   </div>`;
 
   const server =
