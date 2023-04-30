@@ -1,9 +1,9 @@
 const wetherBlock = document.querySelector('#weather');
 
-async function loadWeather(e) {
+async function loadWeather() {
   wetherBlock.innerHTML = `
   <div class="weather__loading">
-    <img src="/images/loading.gif" alt="loading..." />
+    <img src="/src/images/load.gif" alt="Loading..." />
   </div>`;
 
   const server =
@@ -27,17 +27,17 @@ function getWeather(data) {
   const weatherIcon = data.weather[0].icon;
 
   const template = `
-  <div class="weather__header">
-    <div class="weather__main">
-    <div class="weather__city">${location}</div>
-    <div class="weather__status">${weatherStatus}</div>
-    </div>
-    <div class="weather__icon">
-        <img src="https://api.openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}" />
-    </div>
-    </div>
-    <div class="weather__temp">${temp}</div>
-    <div class="weather__feels-like">Feels-like: ${feelsLike}</div>`;
+    <div class="weather__header">
+      <div class="weather__main">
+      <div class="weather__city">${location}</div>
+      <div class="weather__status">${weatherStatus}</div>
+      </div>
+      <div class="weather__icon">
+          <img src="https://api.openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}" />
+      </div>
+      </div>
+      <div class="weather__temp">${temp}</div>
+      <div class="weather__feels-like">Feels-like: ${feelsLike}</div>`;
 
   wetherBlock.innerHTML = template;
 }
