@@ -1,0 +1,62 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  background-color: rgb(88, 88, 87);
+  color: #fff;
+  line-height: 1.5;
+}
+
+.wrapper {
+  padding-top: 80px;
+}
+
+.weather {
+  background-color: #7a956b;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.weather__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather__loading img {
+  max-width: 50px;
+}
+
+.weather__header {
+  display: flex;
+}
+
+.weather__main {
+  flex: 1 1 auto;
+}
+
+.weather__city {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.weather__status {
+  font-style: 46px;
+  margin-bottom: 20px;
+}
+
+.weather__temp {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.weather__temp::after,
+.weather__feels-like::after {
+  display: inline-block;
+  margin-left: 3px;
+  content: '°С';
+}
